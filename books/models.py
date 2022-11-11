@@ -1,4 +1,5 @@
 from distutils.command.upload import upload
+from msilib.schema import ListView
 from django.db import models
 
 # Create your models here.
@@ -21,3 +22,4 @@ class Book(models.Model):
         
     def get_absolute_url(self):
         return reverse('book_detail', args=[str(self.id)])
+
